@@ -17,6 +17,14 @@ export default function Works() {
                 <Menu open={open} setOpen={setOpen} />
             </div>
         <h1 className={`${styles.text} ${styles.page_title}`}>CV</h1>
+        <p className={`${styles.text} ${styles.download_cv_inst}`}>Click the button below if you want to download my CV as PDF</p>
+        <div className={styles.download_cv_button_container}>
+            <a href='/CV_AzahraPutriAndani.pdf' download="CV_AzahraPutriAndani.pdf">
+                <button className={`${styles.see_works_button} ${styles.text}`}>
+                    Download CV
+                </button>
+            </a>   
+        </div>
         </div>
     )
 }

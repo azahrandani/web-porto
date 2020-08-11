@@ -4,7 +4,7 @@ import Link from 'next/link'
 export const StyledMenu = styled.nav`
   display: flex;
   flex-direction: column;
-  transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(130%)'};
+  transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(200%)'};
   height: 100vh;
   text-align: right;
   padding: 2rem;
