@@ -19,7 +19,7 @@ export default function Home() {
         <Menu open={open} setOpen={setOpen} />
       </div>
       <h1 className={`${styles.text} ${styles.my_name}`}>Azahra Putri Andani</h1>
-      <p className={`${styles.text} ${styles.short_desc}`}>A fresh graduate of Computer Science from Universitas Indonesia.</p>
+      <p className={`${styles.text} ${styles.short_desc}`}>Hello there! I am Zahra, a fresh graduate of Computer Science from Universitas Indonesia.</p>
       <p className={`${styles.text} ${styles.short_desc}`}>I want to build impactful products through my lines of codes.</p>
       <div className={styles.see_works_container}>
         <Link href="/works">
