@@ -1,8 +1,7 @@
-import styles from '../styles/Home.module.css'
-import Link from 'next/link'
 import styled from 'styled-components'
+import Link from 'next/link'
 
-const StyledMenu = styled.nav`
+export const StyledMenu = styled.nav`
   display: flex;
   flex-direction: column;
   transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(130%)'};
@@ -40,7 +39,7 @@ const StyledMenu = styled.nav`
   }
 `
 
-const Menu = ({ open }) => {
+export const Menu = ({ open }) => {
   return (
     <StyledMenu open={open}>
       <Link href="/">
@@ -59,7 +58,7 @@ const Menu = ({ open }) => {
   )
 }
 
-const StyledBurger = styled.button`
+export const StyledBurger = styled.button`
   position: absolute;
   top: 5%;
   left: 92vw;
@@ -101,7 +100,7 @@ const StyledBurger = styled.button`
   }
 `
 
-const Burger = ({ open, setOpen }) => {
+export const Burger = ({ open, setOpen }) => {
   return (
     <StyledBurger open={open} onClick={() => {console.log('haha'); console.log(!open); setOpen(!open)}}>
       <div />
@@ -111,12 +110,7 @@ const Burger = ({ open, setOpen }) => {
   )
 }
 
-export default function Home() {
-
-  const [open, setOpen] = React.useState(false);
-  const node = React.useRef();  
-
-  const useOnClickOutside = (ref, handler) => {
+export const useOnClickOutside = (ref, handler) => {
     React.useEffect(() => {
       const listener = event => {
         if (!ref.current || ref.current.contains(event.target)) {
@@ -133,23 +127,3 @@ export default function Home() {
     [ref, handler],
     );
   };
-
-  return (
-    <div className={styles.container}>
-      <div ref={node}>
-        <Burger open={open} setOpen={setOpen} />
-        <Menu open={open} setOpen={setOpen} />
-      </div>
-      <h1 className={`${styles.text} ${styles.my_name}`}>Azahra Putri Andani</h1>
-      <p className={`${styles.text} ${styles.short_desc}`}>A fresh graduate of Computer Science from Universitas Indonesia.</p>
-      <p className={`${styles.text} ${styles.short_desc}`}>I want to build impactful products through my lines of codes.</p>
-      <div className={styles.see_works_container}>
-        <Link href="/works">
-          <button className={`${styles.see_works_button} ${styles.text}`}>
-            See My Works
-          </button>
-        </Link>
-      </div>
-    </div>
-  )
-}
