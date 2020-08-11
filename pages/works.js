@@ -1,5 +1,6 @@
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
+import Head from 'next/head'
 import {StyledMenu, Menu, StyledBurger, Burger, useOnClickOutside} from '../public/burger_menu.js'
 
 export default function Works() {
@@ -8,6 +9,9 @@ export default function Works() {
 
     return (
         <div className={styles.container}>
+            <Head>
+                <title>Azahra Putri Andani's Works</title>
+            </Head>
             <div ref={node}>
                 <Burger open={open} setOpen={setOpen} />
                 <Menu open={open} setOpen={setOpen} />
