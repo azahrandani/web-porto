@@ -89,3 +89,28 @@
   display: flex;
   justify-content: center;
 }
+
+.table {
+  margin-left: 6.1vw;
+}
+
+.contact_rows {
+  height: 4.7em;
+}
+
+.contact_details {
+  font-size: 1.5em;
+}
+
+.contact_icons_col {
+  width: 4.5%;
+  text-align: center;
+}
+
+.contact_icons {
+  width: 2.5em;
+}
+
+.clickable_contact:hover {
+  color: #FFDBDB;
+}
