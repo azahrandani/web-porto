@@ -36,6 +36,98 @@ const PusilkomDesc = () => {
     )
 }
 
+const OvoDesc = () => {
+    return (
+        <div>
+            <div className={`${styles.text} ${styles.work_desc}`}>
+                I did internship at OVO as a <a className={`${styles.highlight}`}>Software Engineer (Backend)</a> from June until August 2019. PT. Visionet Internasional (OVO) is a multinational financial technology company leading Indonesian payments, rewards, and financial services platform. OVO is accepted in more than 300 cities across Indonesia.
+            </div>
+            <div className={`${styles.parent_jobs_image}`}>
+                <div className={`${styles.work_jobs}`}>
+                    <div className={`${styles.text} ${styles.work_desc}`}>
+                    My jobs were:
+                    <ul className={`${styles.ul}`}>
+                        <li>Building a <a className={`${styles.highlight}`}>Java</a> HTTP-calls library from scratch which is used internally for the microservices to communicate. It has features like synchronous and asynchronous calling. It also implements a circuit breaker using <a className={`${styles.highlight}`}>Hystrix</a> library.</li>
+                        <li>Applying the library to existing microservices.</li>
+                        <li>Implementing <a className={`${styles.highlight}`}>unit test</a> with minimum coverage of 90%.</li>
+                        <li>Writing a documentation for the library.</li>
+                        <li>Participating in daily Sprint meeting.</li>
+                        <li>Presenting the result of the work by the end of the internship in front of the engineers and the CTO.</li>
+                    </ul>
+                    </div>
+                </div>
+                <div className={`${styles.work_image_container}`}>
+                    <img className={`${styles.work_image}`} src="ovo_pic.png"></img>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+const ConnectdotDesc = () => {
+    return (
+        <div>
+            <div className={`${styles.text} ${styles.work_desc}`}>
+                This is a 4-months group college project from February until May 2019. We built a website application for our client, IDGW, that helps middle-low society to find jobs. In this project, I was the <a className={`${styles.highlight}`}>Software Engineer (mainly Frontend)</a> and the <a className={`${styles.highlight}`}>UI/UX Designer</a>.
+            </div>
+            <div className={`${styles.parent_jobs_image}`}>
+                <div className={`${styles.work_jobs}`}>
+                    <div className={`${styles.text} ${styles.work_desc}`}>
+                    My jobs were:
+                    <ul className={`${styles.ul}`}>
+                        <li>Building the mockup and deciding design guidelines by using <a className={`${styles.highlight}`}>Figma</a>.</li>
+                        <li>Building the components and pages using <a className={`${styles.highlight}`}>React</a> and the base SCSS files according to the design guidelines.</li>
+                        <li>Doing a little bit of backend jobs using <a className={`${styles.highlight}`}>Python’s Django</a>.</li>
+                        <li>Implementing <a className={`${styles.highlight}`}>TDD</a> with minimum coverage of 95%.</li>
+                        <li>Participating in Sprint meeting twice a week and Sprint planning & review once in two weeks.</li>
+                        <li>Showing the demo of the products to the client.</li>
+                    </ul>
+                    </div>
+                </div>
+                <div className={`${styles.work_image_container}`}>
+                    <img className={`${styles.work_image}`} src="connectdot_pic.png"></img>
+                    <a href="https://youtu.be/VwMH2Lhsaa4" target="_blank">
+                        <button className={`${styles.watch_demo_button} ${styles.text}`}>Watch Demo</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+const ThesisDesc = () => {
+    return (
+        <div>
+            <div className={`${styles.text} ${styles.work_desc}`}>
+                My thesis project is titled “Mapping The Spread of Diseases in Indonesia using News and Twitter Data”. I made an automation process to map the spread of communicable diseases in Indonesia, including Covid-19, from news and tweets data using <a className={`${styles.highlight}`}>machine learning</a>, <a className={`${styles.highlight}`}>rule-based</a>, and <a className={`${styles.highlight}`}>dictionary-based</a> approach. The map is then presented on a website and is available on <a href="https://azahrandani.github.io/disease-mapping/" target="_blank">bit.ly/peta-skripsi-zahra</a>.
+            </div>
+            <div className={`${styles.parent_jobs_image}`}>
+                <div className={`${styles.work_jobs}`}>
+                    <div className={`${styles.text} ${styles.work_desc}`}>
+                    My jobs were:
+                    <ul className={`${styles.ul}`}>
+                        <li>Extracting news data from 11 news sites in Indonesia and twitter data using Twitter API.</li>
+                        <li>Cleaning the data.</li>
+                        <li>Labelling the data.</li>
+                        <li>Performing <a className={`${styles.highlight}`}>classification</a> to differentiate which data consists of disease-related cases using <a className={`${styles.highlight}`}>Multinomial Naive Bayes</a>, <a className={`${styles.highlight}`}>Logistic Regression</a>, and <a className={`${styles.highlight}`}>Extreme Gradient Boosting</a>.</li>
+                        <li>Performing <a className={`${styles.highlight}`}>classification</a> to group the data according to the types of disease using <a className={`${styles.highlight}`}>Support Vector Machine</a> and <a className={`${styles.highlight}`}>Word2Vec</a>.</li>
+                        <li>Performing <a className={`${styles.highlight}`}>classification</a> to differentiate which data consists of disease-related locations using <a className={`${styles.highlight}`}>Support Vector Machine</a>.</li>
+                        <li>Designing a <a className={`${styles.highlight}`}>rule-based</a> and <a className={`${styles.highlight}`}>dictionary-based</a> approach to identify disease locations.</li>
+                        <li>Presenting the result on an online map.</li>
+                    </ul>
+                    </div>
+                </div>
+                <div className={`${styles.work_image_container}`}>
+                    <img className={`${styles.work_image}`} src="thesis_pic.png"></img>
+                    <a href="https://azahrandani.github.io/disease-mapping" target="_blank">
+                        <button className={`${styles.watch_demo_button} ${styles.text}`}>Show me!</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    )
+}
+
 const WorkDescription = ({number}) => {
     return (
         <div>
@@ -43,16 +135,16 @@ const WorkDescription = ({number}) => {
                 <PusilkomDesc/>
             }
             {number === '2' &&
-                <div className={`${styles.text}`}> It's OVO </div>
+                <OvoDesc/>
             }
             {number === '3' &&
-                <div className={`${styles.text}`}> It's ConnectDot </div>
+                <ConnectdotDesc/>
             }
             {number === '4' &&
                 <div className={`${styles.text}`}> It's Calorie </div>
             }
             {number === '5' &&
-                <div className={`${styles.text}`}> It's Thesis </div>
+                <ThesisDesc/>
             }
         </div>
     )

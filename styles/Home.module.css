@@ -189,13 +189,34 @@
   flex: 1;
   text-align: center;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
 .work_image {
-  max-height: 100%;
   max-width: 80%;
+}
+
+.watch_demo_button {
+  width: fit-content;
+  margin-right: 0.1em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  border: 0;
+  border-radius: 0%;
+  background-color: #002432;
+  color: #FF5F53;
+  font-size: 1.5em;
+  cursor: pointer;
+  margin-top: 0.5em;
+  box-shadow:inset 0 0 0 0.2em #FF5F53;
+}
+
+.watch_demo_button:hover {
+  background-color: #FFDBDB;
 }
 
 @media only screen and (max-width: 768px) {
