@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Baloo+Da');
+@import url('https://fonts.googleapis.com/css?family=Dosis');
 
 .container {
   background-color: #002432;
@@ -31,12 +32,12 @@
 }
 
 .text {
-  font-family: 'Baloo Da';
+  font-family: 'Dosis';
   color: #FF5F53;
 }
 
 .my_name {
-  margin-top: 18vh;
+  margin-top: 25vh;
   margin-bottom: 10vh;
   padding-left: 7vw;
   font-size: 4.5em;

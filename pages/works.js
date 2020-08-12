@@ -69,7 +69,7 @@ const ConnectdotDesc = () => {
     return (
         <div>
             <div className={`${styles.text} ${styles.work_desc}`}>
-                This is a 4-months group college project from February until May 2019. We built a website application for our client, IDGW, that helps middle-low society to find jobs. In this project, I was the <a className={`${styles.highlight}`}>Software Engineer (mainly Frontend)</a> and the <a className={`${styles.highlight}`}>UI/UX Designer</a>.
+                This is a 4-months group college project from February until May 2019. We built a website application for our client, a design and software house named IDGW, that helps middle-low society to find jobs. In this project, I was the <a className={`${styles.highlight}`}>Software Engineer (mainly Frontend)</a> and the <a className={`${styles.highlight}`}>UI/UX Designer</a>.
             </div>
             <div className={`${styles.parent_jobs_image}`}>
                 <div className={`${styles.work_jobs}`}>

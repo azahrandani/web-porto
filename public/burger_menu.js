@@ -20,7 +20,7 @@ export const StyledMenu = styled.nav`
     }
 
   a {
-    font-family: Baloo Da;
+    font-family: Dosis;
     font-size: 2.5em;
     color: #FF5F53;
     text-decoration: none;
