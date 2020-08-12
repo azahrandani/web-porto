@@ -27,7 +27,8 @@ export const StyledMenu = styled.nav`
     transition: color 0.3s linear;
 
     @media (max-width: 576px) {
-      font-size: 1.5rem;
+      font-size: 2em;
+      margin-bottom: 0.2em;
       text-align: right;
     }
 
