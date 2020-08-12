@@ -1,4 +1,5 @@
 import styles from '../styles/Home.module.css'
+import Carousel from 'react-images'
 import Link from 'next/link'
 import Head from 'next/head'
 import {StyledMenu, Menu, StyledBurger, Burger, useOnClickOutside} from '../public/burger_menu.js'
@@ -95,6 +96,44 @@ const ConnectdotDesc = () => {
     )
 }
 
+const calorieImages = [{source: 'calorie_1.png'}, {source: 'calorie_2.png'}, {source: 'calorie_3.png'}, {source: 'calorie_4.png'}, {source: 'calorie_5.png'}, {source: 'calorie_6.png'}, {source: 'calorie_7.png'}, {source: 'calorie_8.png'}, {source: 'calorie_9.png'}]
+
+const CalorieDesc = () => {
+    return (
+        <div>
+            <div className={`${styles.text} ${styles.work_desc}`}>
+                This is a 4-months individual college project for my Mobile Development class which I did on September until December 2019. It is an <a className={`${styles.highlight}`}>Android application</a> which can be used to calculate BMI and help users to plan food menu daily according to their calories need.
+            </div>
+            <div className={`${styles.parent_jobs_image}`}>
+                <div className={`${styles.work_jobs}`}>
+                    <div className={`${styles.text} ${styles.work_desc}`}>
+                    It has features like:
+                    <ul className={`${styles.ul}`}>
+                        <li>Calculating BMR and BMI.</li>
+                        <li>Providing a list of food menu and its calories for users to pick as their daily menu.</li>
+                        <li>Saving the food menu to the calendar and remind users about their menu for the day via notifications.</li>
+                        <li>Providing countdown timer to accompany users to exercise and inform them how many calories have been burned afterwards.</li>
+                    </ul>
+                    <div className={`${styles.jobs_calorie}`}>
+                        My jobs were:
+                        <ul className={`${styles.ul}`}>
+                            <li>Building the mockup by using <a className={`${styles.highlight}`}>Figma</a>.</li>
+                            <li>Building the app using <a className={`${styles.highlight}`}>Java’s Android SDK</a> and <a className={`${styles.highlight}`}>Android Studio</a>.</li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+                <div className={`${styles.work_image_container}`}>
+                    <a className={`${styles.text} ${styles.work_desc} ${styles.highlight}`}>Swipe for next pict</a>
+                    <div className={`${styles.calorie_images_container}`}>
+                        <Carousel views={calorieImages}/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
+
 const ThesisDesc = () => {
     return (
         <div>
@@ -141,7 +180,7 @@ const WorkDescription = ({number}) => {
                 <ConnectdotDesc/>
             }
             {number === '4' &&
-                <div className={`${styles.text}`}> It's Calorie </div>
+                <CalorieDesc/>
             }
             {number === '5' &&
                 <ThesisDesc/>
