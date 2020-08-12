@@ -11,11 +11,36 @@ const WorkButton = ({active, number, text, workButtonClickHandle}) => {
     )
 }
 
+const PusilkomDesc = () => {
+    return (
+        <div>
+            <div className={`${styles.text} ${styles.work_desc}`}>
+                I did internship at Pusilkom as a <a className={`${styles.highlight}`}>Software Engineer (Backend) </a>from January until February 2019.  Pusilkom is the Center for Computer Science of Universitas Indonesia. It builds and maintains software products related to university information system. Its clients are the faculties in Universitas Indonesia and other universities or institutions in Indonesia.
+            </div>
+            <div className={`${styles.parent_jobs_image}`}>
+                <div className={`${styles.work_jobs}`}>
+                    <div className={`${styles.text} ${styles.work_desc}`}>
+                    My jobs were:
+                    <ul className={`${styles.ul}`}>
+                        <li>Adding features for an Enterprise University Information System to manage grades, schedules, and e-learning using <a className={`${styles.highlight}`}>PHP </a> and the framework <a className={`${styles.highlight}`}>Yii</a>.</li>
+                        <li>Participating in daily Sprint meeting, weekly Sprint planning, and Sprint review.</li>
+                        <li>Showing the demo of the products to the real clients.</li>
+                    </ul>
+                    </div>
+                </div>
+                <div className={`${styles.work_image_container}`}>
+                    <img className={`${styles.work_image}`} src="pusilkom_pic.png"></img>
+                </div>
+            </div>
+        </div>
+    )
+}
+
 const WorkDescription = ({number}) => {
     return (
         <div>
             {number === '1' &&
-                <div className={`${styles.text}`}> It's Pusilkom </div>
+                <PusilkomDesc/>
             }
             {number === '2' &&
                 <div className={`${styles.text}`}> It's OVO </div>
@@ -45,7 +70,7 @@ const WorksContent = ({ work, setWork }) => {
             <WorkButton active={work == '3'} number='3' text='ConnectDot - Group Project' workButtonClickHandle={workButtonClickHandle}/>
             <WorkButton active={work == '4'} number='4' text='Calorie - Individual Project' workButtonClickHandle={workButtonClickHandle}/>
             <WorkButton active={work == '5'} number='5' text='Thesis Project' workButtonClickHandle={workButtonClickHandle}/>
-            <div className={`${styles.work_desc}`}>
+            <div className={`${styles.work_desc_outline}`}>
                 <WorkDescription number={work} />
             </div>
         </div>

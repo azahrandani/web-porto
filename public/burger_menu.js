@@ -4,6 +4,7 @@ import Link from 'next/link'
 export const StyledMenu = styled.nav`
   display: flex;
   flex-direction: column;
+  background-color: #002432;
   transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(200%)'};
   height: 100vh;
   text-align: right;
@@ -15,6 +16,7 @@ export const StyledMenu = styled.nav`
 
   @media (max-width: 576px) {
       width: 100%;
+      left: 0;
     }
 
   a {
@@ -26,7 +28,7 @@ export const StyledMenu = styled.nav`
 
     @media (max-width: 576px) {
       font-size: 1.5rem;
-      text-align: center;
+      text-align: right;
     }
 
     &:hover {
@@ -72,6 +74,10 @@ export const StyledBurger = styled.button`
   cursor: pointer;
   padding: 0;
   z-index: 10;
+
+  @media (max-width: 576px) {
+    left: 82vw;
+  }
 
   &:focus {
     outline: none;
