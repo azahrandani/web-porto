@@ -87,9 +87,14 @@ const ConnectdotDesc = () => {
                 </div>
                 <div className={`${styles.work_image_container}`}>
                     <img className={`${styles.work_image}`} src="connectdot_pic.png"></img>
-                    <a href="https://youtu.be/VwMH2Lhsaa4" target="_blank">
-                        <button className={`${styles.watch_demo_button} ${styles.text}`}>Watch Demo</button>
-                    </a>
+                    <div>
+                        <a href="https://youtu.be/VwMH2Lhsaa4" target="_blank">
+                            <button className={`${styles.watch_demo_button} ${styles.text} ${styles.connectdot_button_1}`}>Watch Demo</button>
+                        </a>
+                        <a href="https://www.figma.com/file/EujvFqyVtZT7aXAnsyutUa4d/Mockup-Connectdot?node-id=53:695" target="_blank">
+                            <button className={`${styles.watch_demo_button} ${styles.text} ${styles.connectdot_button_2}`}>See Mockup</button>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
