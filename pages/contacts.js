@@ -63,6 +63,7 @@ export default function Works() {
                 </td>
             </tr>
         </table>
+        <p className={open ? `${styles.text} ${styles.credits_none}` : `${styles.text} ${styles.credits}`}>Icons by <a className={`${styles.credits_link}`} href="https://www.flaticon.com/authors/freepik" target="_blank">Freepik</a>.</p>
         </div>
     )
 }

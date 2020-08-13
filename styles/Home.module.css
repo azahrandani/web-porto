@@ -39,8 +39,14 @@
 .credits {
   margin-top: 4em;
   font-size: 1.2em;
-  padding-left: 7vw;
   color: #617C87;
+  right: 5em;
+  bottom: 5em;
+  position: absolute;
+}
+
+.credits_none {
+  display: none;
 }
 
 .credits_link:hover {
@@ -289,6 +295,11 @@
   .contact_icons_col {
     width: 17%;
     text-align: left;
+  }
+
+  .credits {
+    right: 1em;
+    bottom: 1em;
   }
 
 }

@@ -28,7 +28,7 @@ export default function Home() {
           </button>
         </Link>
       </div>
-      <p className={`${styles.text} ${styles.credits}`}>Design inspired by <a className={`${styles.credits_link}`} href="https://www.behance.net/gallery/80571527/Leile?tracking_source=search_projects_recommended%7Cprofile%20website" target="_blank">Bekk for Leile</a>.</p>
+      <p className={open ? `${styles.text} ${styles.credits_none}` : `${styles.text} ${styles.credits}`}>Design inspired by <a className={`${styles.credits_link}`} href="https://www.behance.net/gallery/80571527/Leile?tracking_source=search_projects_recommended%7Cprofile%20website" target="_blank">Bekk for Leile</a>.</p>
     </div>
   )
 }
