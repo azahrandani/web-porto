@@ -81,8 +81,14 @@
   margin-bottom: 0.3em;
 }
 
+.cv_container_parent {
+  display: flex;
+  height: 60vh;
+  justify-content: center;
+  align-items: center;
+}
+
 .download_cv_inst {
-  margin-top: 10vh;
   font-size: 1.5em;
   text-align: center;
 }
@@ -93,11 +99,12 @@
 }
 
 .table {
+  margin-top: 2em;
   margin-left: 6.1vw;
 }
 
 .contact_rows {
-  height: 4.7em;
+  height: 4.3em;
 }
 
 .contact_details {
@@ -199,6 +206,10 @@
   max-width: 80%;
 }
 
+.calorie_right_container {
+  padding-top: 1em;
+}
+
 .watch_demo_button {
   width: fit-content;
   margin-right: 0.1em;
@@ -258,6 +269,15 @@
   .work_image_container {
     margin-top: 1.7em;
     width: 80vw;
+  }
+
+  .calorie_right_container {
+    padding-top: 0;
+  }
+
+  .contact_icons_col {
+    width: 17%;
+    text-align: left;
   }
 
 }

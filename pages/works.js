@@ -123,7 +123,7 @@ const CalorieDesc = () => {
                     </div>
                     </div>
                 </div>
-                <div className={`${styles.work_image_container}`}>
+                <div className={`${styles.work_image_container} ${styles.calorie_right_container}`}>
                     <a className={`${styles.text} ${styles.work_desc} ${styles.highlight}`}>Swipe for next pict</a>
                     <div className={`${styles.calorie_images_container}`}>
                         <Carousel views={calorieImages}/>

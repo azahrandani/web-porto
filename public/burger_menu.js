@@ -22,13 +22,13 @@ export const StyledMenu = styled.nav`
   a {
     font-family: Dosis;
     font-size: 2.5em;
+    margin-bottom: 0.2em;
     color: #FF5F53;
     text-decoration: none;
     transition: color 0.3s linear;
 
     @media (max-width: 576px) {
       font-size: 2em;
-      margin-bottom: 0.2em;
       text-align: right;
     }
 

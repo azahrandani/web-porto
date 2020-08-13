@@ -17,13 +17,17 @@ export default function Works() {
                 <Menu open={open} setOpen={setOpen} />
             </div>
         <h1 className={`${styles.text} ${styles.page_title}`}>CV</h1>
-        <p className={`${styles.text} ${styles.download_cv_inst}`}>Click the button below if you want to download my CV as PDF</p>
-        <div className={styles.download_cv_button_container}>
-            <a href='/CV_Azahra.pdf' download="CV_Azahra.pdf">
-                <button className={`${styles.see_works_button} ${styles.text}`}>
-                    Download CV
-                </button>
-            </a>   
+        <div className={`${styles.cv_container_parent}`}>
+            <div className={`${styles.cv_container_child}`}>
+                <p className={`${styles.text} ${styles.download_cv_inst}`}>Click the button below if you want to download my CV as PDF</p>
+                <div className={styles.download_cv_button_container}>
+                    <a href='/CV_Azahra.pdf' download="CV_Azahra.pdf">
+                        <button className={`${styles.see_works_button} ${styles.text}`}>
+                            Download CV
+                        </button>
+                    </a>   
+                </div>
+            </div>
         </div>
         </div>
     )
