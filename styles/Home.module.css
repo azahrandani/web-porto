@@ -36,6 +36,17 @@
   color: #FF5F53;
 }
 
+.credits {
+  margin-top: 4em;
+  font-size: 1.2em;
+  padding-left: 7vw;
+  color: #617C87;
+}
+
+.credits_link:hover {
+  color: #FFDBDB;
+}
+
 .my_name {
   margin-top: 25vh;
   margin-bottom: 10vh;
