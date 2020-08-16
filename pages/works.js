@@ -101,7 +101,7 @@ const ConnectdotDesc = () => {
     )
 }
 
-const calorieImages = [{source: 'calorie_1.png'}, {source: 'calorie_2.png'}, {source: 'calorie_3.png'}, {source: 'calorie_4.png'}, {source: 'calorie_5.png'}, {source: 'calorie_6.png'}, {source: 'calorie_7.png'}, {source: 'calorie_8.png'}, {source: 'calorie_9.png'}]
+const calorieImages = [{source: 'calorie_1.png'}, {source: 'calorie_2.png'}, {source: 'calorie_3.png'}, {source: 'calorie_4.png'}, {source: 'calorie_5.png'}, {source: 'calorie_6.png'}, {source: 'calorie_7.png'}, {source: 'calorie_8.png'}, {source: 'calorie_9.png'}, {source: 'calorie_10.png'}, {source: 'calorie_11.png'}]
 
 const CalorieDesc = () => {
     return (
