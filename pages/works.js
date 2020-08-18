@@ -3,6 +3,7 @@ import Carousel from 'react-images'
 import Link from 'next/link'
 import Head from 'next/head'
 import {StyledMenu, Menu, StyledBurger, Burger, useOnClickOutside} from '../public/burger_menu.js'
+import ReactCardFlip from 'react-card-flip'
 
 const WorkButton = ({active, number, text, workButtonClickHandle}) => {
     return (
@@ -143,7 +144,7 @@ const ThesisDesc = () => {
     return (
         <div>
             <div className={`${styles.text} ${styles.work_desc}`}>
-                My thesis project is titled “Mapping The Spread of Diseases in Indonesia using News and Twitter Data”. I made an automation process to map the spread of communicable diseases in Indonesia, including Covid-19, from news and tweets data using <a className={`${styles.highlight}`}>machine learning</a>, <a className={`${styles.highlight}`}>rule-based</a>, and <a className={`${styles.highlight}`}>dictionary-based</a> approach. The map is then presented on a website and is available on <a href="https://azahrandani.github.io/disease-mapping/" target="_blank">bit.ly/peta-skripsi-zahra</a>.
+                My thesis project is titled “Mapping The Spread of Diseases in Indonesia using News and Twitter Data”. I made an automation process to map the spread of communicable diseases in Indonesia, including Covid-19, from news and tweets data using <a className={`${styles.highlight}`}>machine learning</a>, <a className={`${styles.highlight}`}>rule-based</a>, and <a className={`${styles.highlight}`}>dictionary-based</a> approach. The map is then presented on a website and is available on <a className={`${styles.credits_link}`} href="https://azahrandani.github.io/disease-mapping/" target="_blank">bit.ly/peta-skripsi-zahra</a>.
             </div>
             <div className={`${styles.parent_jobs_image}`}>
                 <div className={`${styles.work_jobs}`}>
@@ -172,6 +173,48 @@ const ThesisDesc = () => {
     )
 }
 
+const ExerciseCard = ({image, title, description, link}) => {
+    const [isFlipped, setIsFlipped] = React.useState(false);
+    const handleClick = () => {
+        setIsFlipped(!isFlipped);
+    }
+    return (
+        <div className={`${styles.exercise_card}`}>
+            <ReactCardFlip className={`${styles.front_back_card}`} isFlipped={isFlipped} flipDirection="horizontal">
+                <div>
+                    <button className={`${styles.flip_button}`} onClick={handleClick}>
+                        <img className={`${styles.exercise_img}`} src={image}></img>
+                        <p className={`${styles.exercise_text}`}>{title}</p>
+                    </button>
+                </div>
+                <div>
+                    <button className={`${styles.flip_button}`} onClick={handleClick}>
+                        <p className={`${styles.exercise_text}`}>{description}</p>
+                        <button className={`${styles.see_result_button} ${styles.exercise_text}`}><a href={link} target="_blank">See Result</a></button>
+                    </button>
+                </div>
+            </ReactCardFlip>
+        </div>
+    )
+}
+
+const ExerciseDesc = () => {
+    return (
+        <div>
+            <div className={`${styles.text} ${styles.work_desc}`}>
+                These are just exercises that I did on my current free time to get my hands dirty on JavaScript. It is a <a className={`${styles.highlight}`}>Vanilla Javascript</a> Course that is given by John Smilga from <a className={`${styles.credits_link}`} href="https://youtu.be/3PHXvlpOkf4" target="_blank">FreeCodeCamp</a>. John has provided a base code for the HTML and CSS, so I only focused on finishing the HTML and doing the logic on JavaScript. So far, I have finished 3 projects on the course.
+            </div>
+            <div className={`${styles.parent_jobs_image}`}>
+                <div className={`${styles.exercise_cards_container}`}>
+                    <ExerciseCard image="exercise_1.png" title="Color Flipper" description="This page has a button to change the background color of the body in two ways. First, from a pre-defined list of color. Second, by randomly generating hex value." link="https://azahra-color-flipper.netlify.app/"/>
+                    <ExerciseCard image="exercise_2.png" title="Counter" description="This is a simple counter that increments, decrements, and resets the value and changes the text color according to the value." link="https://azahra-counter.netlify.app/"/>
+                    <ExerciseCard image="exercise_3.png" title="Reviews" description="This page shows reviews from a list and navigates through them by previous, next, and 'surprise me' buttons that will show random review from the list." link="https://azahra-reviews.netlify.app/"/>
+                </div>
+            </div>
+        </div>
+    )
+}
+
 const WorkDescription = ({number}) => {
     return (
         <div>
@@ -190,6 +233,9 @@ const WorkDescription = ({number}) => {
             {number === '5' &&
                 <ThesisDesc/>
             }
+            {number === '6' &&
+                <ExerciseDesc/>
+            }
         </div>
     )
 }
@@ -200,12 +246,15 @@ const WorksContent = ({ work, setWork }) => {
     }
 
     return (
-        <div className={`${styles.work_button_container}`}>
-            <WorkButton active={work == '1'} number='1' text='Pusilkom - Intern' workButtonClickHandle={workButtonClickHandle}/>
-            <WorkButton active={work == '2'} number='2' text='OVO - Intern' workButtonClickHandle={workButtonClickHandle}/>
-            <WorkButton active={work == '3'} number='3' text='ConnectDot - Group Project' workButtonClickHandle={workButtonClickHandle}/>
-            <WorkButton active={work == '4'} number='4' text='Calorie - Individual Project' workButtonClickHandle={workButtonClickHandle}/>
-            <WorkButton active={work == '5'} number='5' text='Thesis Project' workButtonClickHandle={workButtonClickHandle}/>
+        <div className={`${styles.works_container}`}>
+            <div className={`${styles.work_button_container}`}>
+                <WorkButton active={work == '1'} number='1' text='Pusilkom - Intern' workButtonClickHandle={workButtonClickHandle}/>
+                <WorkButton active={work == '2'} number='2' text='OVO - Intern' workButtonClickHandle={workButtonClickHandle}/>
+                <WorkButton active={work == '3'} number='3' text='ConnectDot - Group Project' workButtonClickHandle={workButtonClickHandle}/>
+                <WorkButton active={work == '4'} number='4' text='Calorie - Individual Project' workButtonClickHandle={workButtonClickHandle}/>
+                <WorkButton active={work == '5'} number='5' text='Thesis Project' workButtonClickHandle={workButtonClickHandle}/>
+                <WorkButton active={work == '6'} number='6' text='Exercises' workButtonClickHandle={workButtonClickHandle}/>
+            </div>
             <div className={`${styles.work_desc_outline}`}>
                 <WorkDescription number={work} />
             </div>

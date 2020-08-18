@@ -7,8 +7,6 @@
   padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
-  /* justify-content: center;
-  align-items: center; */
 }
 
 .menu_icon_container {
@@ -33,6 +31,25 @@
 
 .text {
   font-family: 'Dosis';
+  color: #FF5F53;
+}
+
+.exercise_text {
+  font-family: 'Dosis';
+  font-size: 1.5em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  text-align: center;
+  color: #002432;
+  cursor: pointer;
+}
+
+.exercise_desc {
+  font-family: 'Dosis';
+  margin: 0;
+  margin-bottom: 0.5em;
+  font-size: 1.5em;
+  text-align: center;
   color: #FF5F53;
 }
 
@@ -149,8 +166,12 @@
   color: #FFDBDB;
 }
 
-.work_button_container {
+.works_container {
   padding-left: 7vw;
+}
+
+.work_button_container {
+  width: 84vw;
 }
 
 .active_work_button {
@@ -264,8 +285,66 @@
   width: 75%;
 }
 
+.exercise_cards_container {
+  width: 100%;
+  margin-top: 1.7em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.exercise_card {
+  background-color: #FF5F53;
+  width: 30%;
+}
+
+.exercise_img {
+  width: 100%;
+}
+
+.front_back_card {
+  height: 100%;
+}
+
+.flip_button {
+  cursor: pointer;
+  border: none;
+  outline-color: none;
+  margin: 0.5em;
+  min-height: 18vw;
+  background-color: #FF5F53;
+}
+
+.flip_button:focus {
+  outline: 0;
+}
+
+.see_result_button {
+  width: fit-content;
+  margin-right: 0.1em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  border: 0;
+  border-radius: 0%;
+  background-color: #FF5F53;
+  font-size: 1.5em;
+  cursor: pointer;
+  margin-top: 0.5em;
+  box-shadow:inset 0 0 0 0.2em #002432;
+}
+
+.see_result_button:hover {
+  color: #FFDBDB;
+}
+
+.ul {
+  margin: 0;
+}
+
 @media only screen and (max-width: 768px) {
-  .text {
+  .text, .exercise_text {
     font-size: 1em;
   }
 
@@ -310,8 +389,24 @@
     bottom: 1em;
   }
 
+  .exercise_card {
+    width: 80%;
+    margin-bottom: 1em;
+  }
+
+  .exercise_cards_container {
+    justify-content: center;
+  }
+
+  .flip_button {
+    min-height: 50vw;
+    margin: 0.2em;
+  }
+
 }
 
-.ul {
-  margin: 0;
+@media only screen and (max-width: 1207px) and (min-width: 769px) {
+  .exercise_text {
+    font-size: 1.5vw;
+  }
 }

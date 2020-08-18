@@ -10,6 +10,7 @@
   "dependencies": {
     "next": "9.5.2",
     "react": "16.13.1",
+    "react-card-flip": "^1.0.11",
     "react-dom": "16.13.1",
     "react-images": "^1.1.7",
     "styled-components": "^4.0.0"
