@@ -157,7 +157,7 @@ const ThesisDesc = () => {
                         <li>Performing <a className={`${styles.highlight}`}>classification</a> to group the data according to the types of disease using <a className={`${styles.highlight}`}>Support Vector Machine</a> and <a className={`${styles.highlight}`}>Word2Vec</a>.</li>
                         <li>Performing <a className={`${styles.highlight}`}>classification</a> to differentiate which data consists of disease-related locations using <a className={`${styles.highlight}`}>Support Vector Machine</a>.</li>
                         <li>Designing a <a className={`${styles.highlight}`}>rule-based</a> and <a className={`${styles.highlight}`}>dictionary-based</a> approach to identify disease locations.</li>
-                        <li>Presenting the result on an online map.</li>
+                        <li>Presenting the result on an online map on top of <a className={`${styles.highlight}`}>React</a>.</li>
                     </ul>
                     </div>
                 </div>

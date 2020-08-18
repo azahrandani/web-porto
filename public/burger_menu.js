@@ -14,9 +14,13 @@ export const StyledMenu = styled.nav`
   left: 79vw;
   transition: transform 0.3s ease-in-out;
 
-  @media (max-width: 576px) {
+  @media (max-width: 950px) {
       width: 100%;
       left: 0;
+    }
+
+  @media (min-width: 1540px) {
+      right: 0;
     }
 
   a {
@@ -30,6 +34,10 @@ export const StyledMenu = styled.nav`
     @media (max-width: 576px) {
       font-size: 2em;
       text-align: right;
+    }
+
+    @media (min-width: 1540px) {
+      margin-right: 3em;
     }
 
     &:hover {
