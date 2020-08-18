@@ -180,7 +180,7 @@ const ExerciseCard = ({image, title, description, link}) => {
     }
     return (
         <div className={`${styles.exercise_card}`}>
-            <ReactCardFlip className={`${styles.front_back_card}`} isFlipped={isFlipped} flipDirection="horizontal">
+            <ReactCardFlip className={`${styles.front_back_card}`} isFlipped={isFlipped} flipDirection="horizontal" cardZIndex="-5">
                 <div>
                     <button className={`${styles.flip_button}`} onClick={handleClick}>
                         <img className={`${styles.exercise_img}`} src={image}></img>
